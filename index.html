@@ -1,0 +1,399 @@
+<!DOCTYPE html>
+<html lang="de">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Frontida Pflegedienst Backnang">
+    <script defer src="https://api.mapbox.com/mapbox-gl-js/v1.9.0/mapbox-gl.js"></script>
+    <script defer src="script.js"></script>
+    <link rel="stylesheet" href="https://api.mapbox.com/mapbox-gl-js/v1.9.0/mapbox-gl.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin>
+    <link rel="dns-prefetch" href="//fonts.googleapis.com">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap">
+    <link rel="apple-touch-icon" sizes="180x180" href="images/favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="images/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="images/favicon/favicon-16x16.png">
+    <link rel="manifest" href="images/favicon/site.webmanifest">
+    <link rel="stylesheet" href="style.css">
+    <title>Frontida Pflegedienst</title>
+</head>
+
+<body>
+    <header>
+        <input type="checkbox" class="overlay-input" id="overlay-input">
+        <label for="overlay-input" class="overlay-button">
+            <span></span>
+        </label>
+        <div class="overlay" id="overlay">
+            <nav>
+                <a href="./" onclick="closeMenu()">Home</a>
+                <a href="#leitbild" onclick="closeMenu()">Leitbild</a>
+                <a href="#leistungen" onclick="closeMenu()">Leistungen</a>
+                <a href="#team" onclick="closeMenu()">Team</a>
+                <a href="#jobs" onclick="closeMenu()">Jobs</a>
+                <a href="#kontakt" onclick="closeMenu()">Kontakt</a>
+                <a href="/gr" onclick="closeMenu()">
+                    <img class="flag" src="images/gr-flag.svg" width="1" height="1" alt="Griechische Flagge">
+                </a>
+            </nav>
+        </div>
+    </header>
+    <main>
+        <div class="spacer-1"></div>
+        <a href="./">
+            <picture>
+                <source srcset="images/frontida-logo.webp" type="image/webp">
+                <source srcset="images/frontida-logo.jpg" type="image/jpeg">
+                <img class="logo" src="images/frontida-logo.jpg" width="4" height="3" alt="Frontida Pflegedienst Logo">
+            </picture>
+        </a>
+        <div class="spacer-1"></div>
+        <picture class="hero-wrapper">
+            <source srcset="images/frontida-team.webp" type="image/webp">
+            <source srcset="images/frontida-team.jpg" type="image/jpeg">
+            <img class="hero" src="images/frontida-team.jpg" width="16" height="9"
+                alt="Frontida Pflegedienst Team Foto">
+        </picture>
+        <div class="spacer-1"></div>
+        <h1>WIR FÜR SIE, IMMER DA</h1>
+        <section id="leitbild">
+            <div class="spacer-1"></div>
+            <div class="card">
+                <div class="card-heading">Leitbild</div>
+                <div class="card-container">
+                    <p>
+                        Oberstes Ziel unseres Pflegedienstes ist es, Ihnen ein Höchstmaß an Selbst&auml;ndigkeit und
+                        Zufriedenheit im h&auml;uschlichen Umfeld zu erm&ouml;glichen. Dar&uuml;berhinaus sind uns auch
+                        Angeh&ouml;rige und Freunde willkommen und finden bei uns ein offenes Ohr f&uuml;r Probleme,
+                        &Auml;ngste und Sorgen.
+                        <br><br>
+                        Zu unserem Pflegeverst&auml;ndnis geh&ouml;rt es Ihre individuellen W&uuml;nsche an erster
+                        Stelle zu stellen und die Pflege nach neuesten, pflegerischen Wissen durchzuf&uuml;hren. Sie
+                        werden ungeachtet Ihrer religi&ouml;sen und kulturellen Herkunft mit W&uuml;rde und
+                        Hilfsbereitschaft betreut.
+                        <br><br>
+                        Unser St&uuml;tzpunkt befindet sich in Backnang und unser Kundenkreis lebt im Raum
+                        Rems-Murr-Kreis. Neben Grund– und Behandlungspflege bieten wir hauswirtschaftliche Versorgung,
+                        Fahrdienste, Begleitung zu &Auml;rzten und Betreuung zu Hause an. Dar&uuml;berhinaus arbeiten
+                        wir mit allen Berufsgruppen des Gesundheitswesens und den Sozialhilfetr&auml;gern zusammen.
+                        Zus&auml;tzlich k&ouml;nnen wir durch die Kooperation mit einem Allgemeinarzt auch
+                        regelm&auml;&szlig;ige &auml;rtzliche Hausbesuche sicherstellen. Wir sind Mitglied im bpa und
+                        zertifiziert nach IGD. Unsere Mitarbeiter nehmen regelm&auml;&szlig;ig an in- und externen
+                        Fortbildungen teil um unsere Qualit&auml;t stetig zu steigern und uns pflegerisch
+                        weiterzuentwickeln.
+                    </p>
+                    <div class="spacer-1"></div>
+                    <img src="images/bpa.svg" width="4" height="3" alt="bpa Logo">
+                </div>
+            </div>
+        </section>
+        <class class="spacer-1"></class>
+        <section id="leistungen">
+            <div class="spacer-1"></div>
+            <div class="card">
+                <div class="card-heading">Leistungen</div>
+                <class class="card-container">
+                    <img class="heading-icon-big" src="images/leistungen/care.svg" width="1" height="1"
+                        alt="Zwei H&auml;nde umschlie&szlig;en ein Herz">
+                    <div class="spacer-1"></div>
+                    <h2>
+                        24 Stunden am Tag, 7 Tage die Woche.
+                        <br><br>
+                        Wir beraten Sie gerne in folgenden Bereichen:
+                    </h2>
+                    <div class="spacer-1"></div>
+                    <div class="leistungen-grid">
+                        <div class="leistungen-item">
+                            <img class="item-icon" src="images/leistungen/bandage.svg" width="1" height="1"
+                                alt="Wundverband">
+                            <p>Anlegen und Wechseln von Wundverb&auml;nden</p>
+                        </div>
+                        <div class="leistungen-item">
+                            <img class="item-icon" src="images/leistungen/compression-bandage.svg" width="1" height="1"
+                                alt="Kompressionsverband">
+                            <p>Anlegen von Kompressionsverb&auml;nden</p>
+                        </div>
+                        <div class="leistungen-item">
+                            <img class="item-icon" src="images/leistungen/pill.svg" width="1" height="1"
+                                alt="Medikamente">
+                            <p>Medikamente richten und &Uuml;berwachung der Einnahme</p>
+                        </div>
+                        <div class="leistungen-item">
+                            <img class="item-icon" src="images/leistungen/ointment.svg" width="1" height="1"
+                                alt="Salbe">
+                            <p>Einreibung von verschreibungspflichtigen Salben</p>
+                        </div>
+                        <div class="leistungen-item">
+                            <img class="item-icon" src="images/leistungen/blood-sugar.svg" width="1" height="1"
+                                alt="Blutzucker">
+                            <p>Blutzuckerbestimmung</p>
+                        </div>
+                        <div class="leistungen-item">
+                            <img class="item-icon" src="images/leistungen/blood-pressure.svg" width="1" height="1"
+                                alt="Blutdruck">
+                            <p>Blutdruckkontrollen</p>
+                        </div>
+                        <div class="leistungen-item">
+                            <img class="item-icon" src="images/leistungen/catheter.svg" width="1" height="1"
+                                alt="Katheter">
+                            <p>Katheterversorgung</p>
+                        </div>
+                        <div class="leistungen-item">
+                            <img class="item-icon" src="images/leistungen/bladder.svg" width="1" height="1" alt="Blase">
+                            <p>Blasensp&uuml;lung</p>
+                        </div>
+                    </div>
+                    <div class="spacer-1"></div>
+                    <h2>
+                        Nach &auml;rztlicher Verordnung &uuml;bernehmen wir Ihre medizinische Versorgung auch ohne
+                        Pflegegrad.
+                    </h2>
+                    <div class="spacer-1"></div>
+                    <hr>
+                    <div class="spacer-1"></div>
+                    <img class="heading-icon-small" src="images/leistungen/home.svg" width="1" height="1" alt="Haus">
+                    <h2>Haushaltshilfe</h2>
+                    <div class="spacer-1"></div>
+                    <h2>
+                        Wir unterst&uuml;tzen Sie im Alltag, wir entlassen Sie von Hausarbeiten, Eink&auml;ufen und
+                        anderen
+                        M&uuml;hseligkeiten.
+                    </h2>
+                    <div class="spacer-1"></div>
+                    <div class="leistungen-grid">
+                        <div class="leistungen-item">
+                            <img class="item-icon" src="images/leistungen/shopping-cart.svg" width="1" height="1"
+                                alt="Einkaufswagen">
+                            <p>Einkaufen</p>
+                        </div>
+                        <div class="leistungen-item">
+                            <img class="item-icon" src="images/leistungen/vacuum.svg" width="1" height="1"
+                                alt="Staubsauger">
+                            <p>Reinigung</p>
+                        </div>
+                        <div class="leistungen-item">
+                            <img class="item-icon" src="images/leistungen/washing-machine.svg" width="1" height="1"
+                                alt="Waschmaschine">
+                            <p>W&auml;sche waschen</p>
+                        </div>
+                        <div class="leistungen-item">
+                            <img class="item-icon" src="images/leistungen/bed.svg" width="1" height="1" alt="Bett">
+                            <p>Bett beziehen</p>
+                        </div>
+                    </div>
+                    <div class="spacer-1"></div>
+                    <hr>
+                    <div class="spacer-1"></div>
+                    <img class="heading-icon-small" src="images/leistungen/emergency-call.svg" width="1" height="1"
+                        alt="Notruf">
+                    <h2>Hausnotruf</h2>
+                    <div class="spacer-1"></div>
+                    <h2>
+                        Sie m&ouml;chten sicher in Ihren eigenen vier W&auml;nden leben? In Notf&auml;llen sind wir rund
+                        um
+                        die Uhr f&uuml;r
+                        Sie erreichbar.
+                    </h2>
+                </class>
+            </div>
+        </section>
+        <class class="spacer-1"></class>
+        <section id="team">
+            <div class="spacer-1"></div>
+            <div class="card">
+                <div class="card-heading">Team</div>
+                <div class="card-container">
+                    <h2>
+                        Wir garantieren Ihnen eine Rund-um-die-Uhr-Pflege durch erfahrene, fachkundige und qualifizierte
+                        Pflegekr&auml;fte.
+                    </h2>
+                    <div class="spacer-1"></div>
+                    <div class="team-grid">
+                        <div class="team-item">
+                            <picture>
+                                <source srcset="images/team/maria.webp" type="image/webp">
+                                <source srcset="images/team/maria.jpg" type="image/jpeg">
+                                <img src="images/team/maria.jpg" width="3" height="4" alt="Maria Marou">
+                            </picture>
+                            <div class="spacer-1"></div>
+                            <div class="team-item-label">
+                                <p><strong>Maria Marou</strong></p>
+                                <div class="spacer-1"></div>
+                                <p>PDL, Gesch&auml;ftsf&uuml;hrerin</p>
+                            </div>
+                        </div>
+                        <div class="team-item">
+                            <picture>
+                                <source srcset="images/team/anestina.webp" type="image/webp">
+                                <source srcset="images/team/anestina.jpg" type="image/jpeg">
+                                <img src="images/team/anestina.jpg" width="3" height="4" alt="Anestina Tsiampazi">
+                            </picture>
+                            <div class="spacer-1"></div>
+                            <div class="team-item-label">
+                                <p><strong>Anestina Tsiampazi</strong></p>
+                                <div class="spacer-1"></div>
+                                <p>Stellv. PDL</p>
+                            </div>
+                        </div>
+                        <div class="team-item">
+                            <picture>
+                                <source srcset="images/team/eleni.webp" type="image/webp">
+                                <source srcset="images/team/eleni.jpg" type="image/jpeg">
+                                <img src="images/team/eleni.jpg" width="3" height="4" alt="Eleni Charana">
+                            </picture>
+                            <div class="spacer-1"></div>
+                            <div class="team-item-label">
+                                <p><strong>Eleni Charana</strong></p>
+                                <div class="spacer-1"></div>
+                                <p>Pflegehelfer</p>
+                            </div>
+                        </div>
+                        <div class="team-item">
+                            <picture>
+                                <source srcset="images/team/stavroula.webp" type="image/webp">
+                                <source srcset="images/team/stavroula.jpg" type="image/jpeg">
+                                <img src="images/team/stavroula.jpg" width="3" height="4" alt="Stavroula Georgikou">
+                            </picture>
+                            <div class="spacer-1"></div>
+                            <div class="team-item-label">
+                                <p><strong>Stavroula Georgikou</strong></p>
+                                <div class="spacer-1"></div>
+                                <p>Pflegehelfer</p>
+                            </div>
+                        </div>
+                        <div class="team-item">
+                            <picture>
+                                <source srcset="images/team/despina.webp" type="image/webp">
+                                <source srcset="images/team/despina.jpg" type="image/jpeg">
+                                <img src="images/team/despina.jpg" width="3" height="4" alt="Despina Tsomareli">
+                            </picture>
+                            <div class="spacer-1"></div>
+                            <div class="team-item-label">
+                                <p><strong>Despina Tsomareli</strong></p>
+                                <div class="spacer-1"></div>
+                                <p>Verwaltung</p>
+                            </div>
+                        </div>
+                        <div class="team-item">
+                            <picture>
+                                <source srcset="images/team/gianitsa.webp" type="image/webp">
+                                <source srcset="images/team/gianitsa.jpg" type="image/jpeg">
+                                <img src="images/team/gianitsa.jpg" width="3" height="4" alt="Gianitsa Fotiou">
+                            </picture>
+                            <div class="spacer-1"></div>
+                            <div class="team-item-label">
+                                <p><strong>Gianitsa Fotiou</strong></p>
+                                <div class="spacer-1"></div>
+                                <p>Haushalt</p>
+                            </div>
+                        </div>
+                        <div class="team-item">
+                            <picture>
+                                <source srcset="images/team/anastasia.webp" type="image/webp">
+                                <source srcset="images/team/anastasia.jpg" type="image/jpeg">
+                                <img src="images/team/anastasia.jpg" width="3" height="4" alt="Anastasia Moissidou">
+                            </picture>
+                            <div class="spacer-1"></div>
+                            <div class="team-item-label">
+                                <p><strong>Anastasia Moissidou</strong></p>
+                                <div class="spacer-1"></div>
+                                <p>Haushalt</p>
+                            </div>
+                        </div>
+                        <div class="team-item">
+                            <picture>
+                                <source srcset="images/team/fotis.webp" type="image/webp">
+                                <source srcset="images/team/fotis.jpg" type="image/jpeg">
+                                <img src="images/team/fotis.jpg" width="3" height="4" alt="Fotios Kioutanidis">
+                            </picture>
+                            <div class="spacer-1"></div>
+                            <div class="team-item-label">
+                                <p><strong>Fotios Kioutanidis</strong></p>
+                                <div class="spacer-1"></div>
+                                <p>Auszubildener</p>
+                            </div>
+                        </div>
+                        <div class="team-item">
+                            <picture>
+                                <source srcset="images/team/kiki.webp" type="image/webp">
+                                <source srcset="images/team/kiki.jpg" type="image/jpeg">
+                                <img src="images/team/kiki.jpg" width="3" height="4" alt="Kiki Athanasoglou">
+                            </picture>
+                            <div class="spacer-1"></div>
+                            <div class="team-item-label">
+                                <p><strong>Kiki Athanasoglou</strong></p>
+                                <div class="spacer-1"></div>
+                                <p>Erg. Hilfe</p>
+                            </div>
+                        </div>
+                        <div class="team-item">
+                            <picture>
+                                <source srcset="images/team/kostas.webp" type="image/webp">
+                                <source srcset="images/team/kostas.jpg" type="image/jpeg">
+                                <img src="images/team/kostas.jpg" width="3" height="4" alt="Kostas Maros">
+                            </picture>
+                            <div class="spacer-1"></div>
+                            <div class="team-item-label">
+                                <p><strong>Kostas Maros</strong></p>
+                                <div class="spacer-1"></div>
+                                <p>Minijob</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="spacer-3"></div>
+                    <h2>Unser Motto:</h2>
+                    <h1>Wenn der Kunde zufrieden ist, sind wir auch zufrieden.</h1>
+                </div>
+            </div>
+        </section>
+        <class class="spacer-1"></class>
+        <section id="jobs">
+            <div class="spacer-1"></div>
+            <div class="card">
+                <div class="card-heading">Jobs</div>
+                <div class="card-container">
+                    <h2>Zur Verst&auml;rkung unseres Teams suchen wir momentan:</h2>
+                    <ul>
+                        <li>Examinierte Pflegekr&auml;fte (m/w)</li>
+                        <li>Pflegehelfer (m/w)</li>
+                    </ul>
+                    <h2>In Vollzeit, Teilzeit oder auf Minijobbasis.</h2>
+                    <h2>Bei Fragen stehen wir Ihnen jederzeit per Telefon oder E-Mail zur Verf&uuml;gung.</h2>
+                </div>
+            </div>
+        </section>
+        <class class="spacer-1"></class>
+        <section id="kontakt">
+            <div class="spacer-1"></div>
+            <div class="card">
+                <div class="card-heading">Kontakt</div>
+                <div class="card-container">
+                    <div class="address">
+                        <p style="color: #2664ad;">
+                            <strong>Frontida Pflegedienst Backnang</strong><br><br>
+                        </p>
+                        <p>
+                            Sulzbacher Str. 168A<br><br>
+                            71522 Backnang<br><br>
+                            Telefon: 07191 1877577<br><br>
+                            Fax: 07191 1877578<br><br>
+                            E-Mail: <a href="mailto:info@frontida-pflegedienst.de">info@frontida-pflegedienst.de</a>
+                        </p>
+                    </div>
+                    <div class="spacer-1"></div>
+                    <div id="map"></div>
+                </div>
+            </div>
+        </section>
+    </main>
+    <class class="spacer-3"></class>
+    <footer>
+        <nav>
+            <a href="impressum">Impressum</a>
+            <a href="datenschutz">Datenschutz</a>
+        </nav>
+    </footer>
+</body>
+
+</html>

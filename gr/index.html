@@ -1,0 +1,376 @@
+<!DOCTYPE html>
+<html lang="de">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Frontida Pflegedienst Backnang">
+    <script defer src="https://api.mapbox.com/mapbox-gl-js/v1.9.0/mapbox-gl.js"></script>
+    <script defer src="../script.js"></script>
+    <link rel="stylesheet" href="https://api.mapbox.com/mapbox-gl-js/v1.9.0/mapbox-gl.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin>
+    <link rel="dns-prefetch" href="//fonts.googleapis.com">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap">
+    <link rel="apple-touch-icon" sizes="180x180" href="../images/favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="../images/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="../images/favicon/favicon-16x16.png">
+    <link rel="manifest" href="../images/favicon/site.webmanifest">
+    <link rel="stylesheet" href="../style.css">
+    <title>Frontida Pflegedienst</title>
+</head>
+
+<body>
+    <header>
+        <input type="checkbox" class="overlay-input" id="overlay-input">
+        <label for="overlay-input" class="overlay-button">
+            <span></span>
+        </label>
+        <div class="overlay" id="overlay">
+            <nav>
+                <a href="./" onclick="closeMenu()">Αρχικη</a>
+                <a href="#leitbild" onclick="closeMenu()">Η εταιρεια</a>
+                <a href="#leistungen" onclick="closeMenu()">Υπηρεσιες</a>
+                <a href="#team" onclick="closeMenu()">Ομαδα</a>
+                <a href="#jobs" onclick="closeMenu()">Θεσεις εργασιας</a>
+                <a href="#kontakt" onclick="closeMenu()">Επικοινωνια</a>
+                <a href="../" onclick="closeMenu()">
+                    <img class="flag" src="../images/de-flag.svg" width="1" height="1" alt="Deutshce Flagge">
+                </a>
+            </nav>
+        </div>
+    </header>
+    <main>
+        <div class="spacer-1"></div>
+        <a href="./">
+            <picture>
+                <source srcset="../images/frontida-logo.webp" type="image/webp">
+                <source srcset="../images/frontida-logo.jpg" type="image/jpeg">
+                <img class="logo" src="../images/frontida-logo.jpg" width="4" height="3"
+                    alt="Frontida Pflegedienst Logo">
+            </picture>
+        </a>
+        <div class="spacer-1"></div>
+        <picture class="hero-wrapper">
+            <source srcset="../images/frontida-team.webp" type="image/webp">
+            <source srcset="../images/frontida-team.jpg" type="image/jpeg">
+            <img class="hero" src="../images/frontida-team.jpg" width="16" height="9"
+                alt="Frontida Pflegedienst Team Foto">
+        </picture>
+        <div class="spacer-1"></div>
+        <h1>ΕΜΕΙΣ ΓΙΑ ΕΣΑΣ, ΠΑΝΤΑ ΜΑΖΙ</h1>
+        <section id="leitbild">
+            <div class="spacer-1"></div>
+            <div class="card">
+                <div class="card-heading">Ποιοι ειμαστε</div>
+                <div class="card-container">
+                    <p>
+                        Το <strong>FRONTIDA</strong> είναι υπηρεσία φροντίδας ηλικιωµένων και ατόµων µε κινητικές
+                        δυσλειτουργίες και ειδικά προβλήµατα. ∆ηµιουργήθηκε για να προσφέρει, µε πλήρεις υπηρεσίες, την
+                        Επαγγελµατική Φροντίδα που χρειάζονται οι αγαπηµένοι σας στο δικό τους χώρο.
+                        <br><br>
+                        Είµαστε δίπλα σας για να συζητήσουµε τις δικές σας ιδιαίτερες ανάγκες και για να παρέχουµε
+                        λύσεις που θα ικανοποιήσουν τις προσδοκίες σας, για την φροντίδα του αγαπηµένου σας προσώπου.
+                    </p>
+                </div>
+            </div>
+        </section>
+        <class class="spacer-1"></class>
+        <section id="leistungen">
+            <div class="spacer-1"></div>
+            <div class="card">
+                <div class="card-heading">Υπηρεσιες</div>
+                <class class="card-container">
+                    <img src="../images/leistungen/care.svg" width="1" height="1" alt="Zwei Hände umschließen ein Herz"
+                        class="heading-icon-big">
+                    <div class="spacer-1"></div>
+                    <h2>
+                        24 ώρες την ημέρα, 7 ημέρες την εβδομάδα.
+                        <br><br>
+                        Θα χαρούμε να σας συμβουλέψουμε στους ακόλουθους τομείς:
+                    </h2>
+                    <div class="spacer-1"></div>
+                    <div class="leistungen-grid">
+                        <div class="leistungen-item">
+                            <img class="item-icon" src="../images/leistungen/bandage.svg" width="1" height="1"
+                                alt="Wundverband">
+                            <p>Περιποίηση χειρουργικών και μη τραυμάτων</p>
+                        </div>
+                        <div class="leistungen-item">
+                            <img class="item-icon" src="../images/leistungen/compression-bandage.svg"
+                                alt="Kompressionsverband">
+                            <p>Τοποθέτηση αντιθρομβωτικής κάλτσας (Φλεβίτιδας) και ελαστικού επιδέσμου</p>
+                        </div>
+                        <div class="leistungen-item">
+                            <img class="item-icon" src="../images/leistungen/pill.svg" width="1" height="1"
+                                alt="Medikamente">
+                            <p>Χορήγηση φαρμάκων</p>
+                        </div>
+                        <div class="leistungen-item">
+                            <img class="item-icon" src="../images/leistungen/ointment.svg" width="1" height="1"
+                                alt="Salbe">
+                            <p>Επάλειψη θεραπευτικής αλοιφής</p>
+                        </div>
+                        <div class="leistungen-item">
+                            <img class="item-icon" src="../images/leistungen/blood-sugar.svg" width="1" height="1"
+                                alt="Blutzucker">
+                            <p>Μέτρηση σακχάρου</p>
+                        </div>
+                        <div class="leistungen-item">
+                            <img class="item-icon" src="../images/leistungen/blood-pressure.svg" width="1" height="1"
+                                alt="Blutdruck">
+                            <p>Έλεγχος της αρτηριακής πίεσης</p>
+                        </div>
+                        <div class="leistungen-item">
+                            <img class="item-icon" src="../images/leistungen/catheter.svg" width="1" height="1"
+                                alt="Katheter">
+                            <p>Καθετηριασμός</p>
+                        </div>
+                        <div class="leistungen-item">
+                            <img class="item-icon" src="../images/leistungen/bladder.svg" width="1" height="1"
+                                alt="Blase">
+                            <p>Πλύσεις ουροδόχου κύστεως</p>
+                        </div>
+                    </div>
+                    <div class="spacer-1"></div>
+                    <h2>
+                        Σύμφωνα με ιατρική συνταγή, αναλαμβάνουμε την ιατρική σας περίθαλψη.
+                    </h2>
+                    <div class="spacer-1"></div>
+                    <hr>
+                    <div class="spacer-1"></div>
+                    <img class="heading-icon-small" src="../images/leistungen/home.svg" width="1" height="1" alt="Haus">
+                    <h2>Οικιακή βοηθός</h2>
+                    <div class="spacer-1"></div>
+                    <h2>
+                        Σας υποστηρίζουμε στην καθημερινή ζωή, σας απελευθερώνουμε από μικροδουλειές, ψώνια και άλλα
+                        προβλήματα.
+                    </h2>
+                    <div class="spacer-1"></div>
+                    <div class="leistungen-grid">
+                        <div class="leistungen-item">
+                            <img class="item-icon" src="../images/leistungen/shopping-cart.svg" width="1" height="1"
+                                alt="Einkaufswagen">
+                            <p>Καθημερινά ψώνια</p>
+                        </div>
+                        <div class="leistungen-item">
+                            <img class="item-icon" src="../images/leistungen/vacuum.svg" width="1" height="1"
+                                alt="Staubsauger">
+                            <p>Καθαρισμός</p>
+                        </div>
+                        <div class="leistungen-item">
+                            <img class="item-icon" src="../images/leistungen/washing-machine.svg" width="1" height="1"
+                                alt="Waschmaschine">
+                            <p>Πλύσιμο ρούχων</p>
+                        </div>
+                        <div class="leistungen-item">
+                            <img class="item-icon" src="../images/leistungen/bed.svg" width="1" height="1" alt="Bett">
+                            <p>Στρώσιμο κρεβατιού</p>
+                        </div>
+                    </div>
+                    <div class="spacer-1"></div>
+                    <hr>
+                    <div class="spacer-1"></div>
+                    <img class="heading-icon-small" src="../images/leistungen/emergency-call.svg" width="1" height="1"
+                        alt="Notruf">
+                    <h2>Κλήση έκτακτης ανάγκης</h2>
+                    <div class="spacer-1"></div>
+                    <h2>
+                        Σε καταστάσεις έκτακτης ανάγκης είμαστε στη διάθεσή σας όλο το 24ωρο.
+                    </h2>
+                </class>
+            </div>
+        </section>
+        <class class="spacer-1"></class>
+        <section id="team">
+            <div class="spacer-1"></div>
+            <div class="card">
+                <div class="card-heading">Ομαδα</div>
+                <div class="card-container">
+                    <h2>
+                        Σας εγγυόμαστε 24ωρη φροντίδα από έμπειρο, ικανό και εξειδικευμένο νοσηλευτικό προσωπικό.
+                    </h2>
+                    <div class="spacer-1"></div>
+                    <div class="team-grid">
+                        <div class="team-item">
+                            <picture>
+                                <source srcset="../images/team/maria.webp" type="image/webp">
+                                <source srcset="../images/team/maria.jpg" type="image/jpeg">
+                                <img src="../images/team/maria.jpg" width="3" height="4" alt="Maria Marou">
+                            </picture>
+                            <div class="spacer-1"></div>
+                            <div class="team-item-label">
+                                <p><strong>Μαρία Μάρου</strong></p>
+                                <div class="spacer-1"></div>
+                                <p>Νοσηλευτική διαχείριση, Διευθύνων Σύμβουλος</p>
+                            </div>
+                        </div>
+                        <div class="team-item">
+                            <picture>
+                                <source srcset="../images/team/anestina.webp" type="image/webp">
+                                <source srcset="../images/team/anestina.jpg" type="image/jpeg">
+                                <img src="../images/team/anestina.jpg" width="3" height="4" alt="Anestina Tsiampazi">
+                            </picture>
+                            <div class="spacer-1"></div>
+                            <div class="team-item-label">
+                                <p><strong>Ανεστίνα Τσιαμπάζη</strong></p>
+                                <div class="spacer-1"></div>
+                                <p>Βοηθός προϊσταμένη, Υπεύθυνη τμήματος</p>
+                            </div>
+                        </div>
+                        <div class="team-item">
+                            <picture>
+                                <source srcset="../images/team/eleni.webp" type="image/webp">
+                                <source srcset="../images/team/eleni.jpg" type="image/jpeg">
+                                <img src="../images/team/eleni.jpg" width="3" height="4" alt="Eleni Charana">
+                            </picture>
+                            <div class="spacer-1"></div>
+                            <div class="team-item-label">
+                                <p><strong>Ελένη Χαρανά</strong></p>
+                                <div class="spacer-1"></div>
+                                <p>Βοηθός Νοσοκόμα</p>
+                            </div>
+                        </div>
+                        <div class="team-item">
+                            <picture>
+                                <source srcset="../images/team/stavroula.webp" type="image/webp">
+                                <source srcset="../images/team/stavroula.jpg" type="image/jpeg">
+                                <img src="../images/team/stavroula.jpg" width="3" height="4" alt="Stavroula Georgikou">
+                            </picture>
+                            <div class="spacer-1"></div>
+                            <div class="team-item-label">
+                                <p><strong>Σταυρούλα Γεωργίκου</strong></p>
+                                <div class="spacer-1"></div>
+                                <p>Βοηθός Νοσοκόμα</p>
+                            </div>
+                        </div>
+                        <div class="team-item">
+                            <picture>
+                                <source srcset="../images/team/despina.webp" type="image/webp">
+                                <source srcset="../images/team/despina.jpg" type="image/jpeg">
+                                <img src="../images/team/despina.jpg" width="3" height="4" alt="Despina Tsomareli">
+                            </picture>
+                            <div class="spacer-1"></div>
+                            <div class="team-item-label">
+                                <p><strong>Δέσποινα Τσομαρέλη</strong></p>
+                                <div class="spacer-1"></div>
+                                <p>Διοίκηση</p>
+                            </div>
+                        </div>
+                        <div class="team-item">
+                            <picture>
+                                <source srcset="../images/team/gianitsa.webp" type="image/webp">
+                                <source srcset="../images/team/gianitsa.jpg" type="image/jpeg">
+                                <img src="../images/team/gianitsa.jpg" width="3" height="4" alt="Gianitsa Fotiou">
+                            </picture>
+                            <div class="spacer-1"></div>
+                            <div class="team-item-label">
+                                <p><strong>Γιανίτσα Φωτίου</strong></p>
+                                <div class="spacer-1"></div>
+                                <p>Οικιακή βοηθός</p>
+                            </div>
+                        </div>
+                        <div class="team-item">
+                            <picture>
+                                <source srcset="../images/team/anastasia.webp" type="image/webp">
+                                <source srcset="../images/team/anastasia.jpg" type="image/jpeg">
+                                <img src="../images/team/anastasia.jpg" width="3" height="4" alt="Anastasia Moissidou">
+                            </picture>
+                            <div class="spacer-1"></div>
+                            <div class="team-item-label">
+                                <p><strong>Αναστασία Μωυσιάδου</strong></p>
+                                <div class="spacer-1"></div>
+                                <p>Οικιακή βοηθός</p>
+                            </div>
+                        </div>
+                        <div class="team-item">
+                            <picture>
+                                <source srcset="../images/team/fotis.webp" type="image/webp">
+                                <source srcset="../images/team/fotis.jpg" type="image/jpeg">
+                                <img src="../images/team/fotis.jpg" width="3" height="4" alt="Fotios Kioutanidis">
+                            </picture>
+                            <div class="spacer-1"></div>
+                            <div class="team-item-label">
+                                <p><strong>Φώτιος Κιουτανίδης</strong></p>
+                                <div class="spacer-1"></div>
+                                <p>Εκπαιδευόμενος</p>
+                            </div>
+                        </div>
+                        <div class="team-item">
+                            <picture>
+                                <source srcset="../images/team/kiki.webp" type="image/webp">
+                                <source srcset="../images/team/kiki.jpg" type="image/jpeg">
+                                <img src="../images/team/kiki.jpg" width="3" height="4" alt="Kiki Athanasoglou">
+                            </picture>
+                            <div class="spacer-1"></div>
+                            <div class="team-item-label">
+                                <p><strong>Κυριακή Αθανασόγλου</strong></p>
+                                <div class="spacer-1"></div>
+                                <p>Βοηθητικό προσωπικό</p>
+                            </div>
+                        </div>
+                        <div class="team-item">
+                            <picture>
+                                <source srcset="../images/team/kostas.webp" type="image/webp">
+                                <source srcset="../images/team/kostas.jpg" type="image/jpeg">
+                                <img src="../images/team/kostas.jpg" width="3" height="4" alt="Kostas Maros">
+                            </picture>
+                            <div class="spacer-1"></div>
+                            <div class="team-item-label">
+                                <p><strong>Κωνσταντίνος Μάρος</strong></p>
+                                <div class="spacer-1"></div>
+                                <p>Minijob</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="spacer-3"></div>
+                    <h2>Το σύνθημά μας:</h2>
+                    <h1>Εάν ο πελάτης είναι ευχαριστημένος, είμαστε και εμείς ευχαριστημένοι.</h1>
+                </div>
+            </div>
+        </section>
+        <class class="spacer-1"></class>
+        <section id="jobs">
+            <div class="spacer-1"></div>
+            <div class="card">
+                <div class="card-heading">Θεσεις εργασιας</div>
+                <div class="card-container">
+                    <h2>Για να ενισχύσουμε την ομάδα μας, χρειαζόμαστε Νοσηλευτές/τριες και βοηθητικό προσωπικό.</h2>
+                    <h2>Πλήρης απασχόληση, μερική απασχόληση ή σε Minijob.</h2>
+                    <h2>Για πληροφορίες επικοινωνήστε μαζί μας.</h2>
+                </div>
+            </div>
+        </section>
+        <class class="spacer-1"></class>
+        <section id="kontakt">
+            <div class="spacer-1"></div>
+            <div class="card">
+                <div class="card-heading">Επικοινωνια</div>
+                <div class="card-container">
+                    <div class="address">
+                        <p style="color: #2664ad;">
+                            <strong>Frontida Pflegedienst Backnang</strong><br><br>
+                        </p>
+                        <p>
+                            Sulzbacher Str. 168A<br><br>
+                            71522 Backnang<br><br>
+                            Telefon: 07191 1877577<br><br>
+                            Fax: 07191 1877578<br><br>
+                            E-Mail: <a href="mailto:info@frontida-pflegedienst.de">info@frontida-pflegedienst.de</a>
+                        </p>
+                    </div>
+                    <div class="spacer-1"></div>
+                    <div id="map"></div>
+                </div>
+            </div>
+        </section>
+    </main>
+    <class class="spacer-3"></class>
+    <footer>
+        <nav>
+            <a href="../impressum">Αποποιηση ευθυνων</a>
+            <a href="../datenschutz">Πολιτικη Απορρητου</a>
+        </nav>
+    </footer>
+</body>
+
+</html>

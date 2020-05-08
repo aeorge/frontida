@@ -1,0 +1,536 @@
+:root {
+  --primary-color: #2664ad;
+  --secondary-color: #d46084;
+  --shadow: 0px 5px 15px -5px rgba(0, 0, 0, 0.25);
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  margin: 0;
+  font-family: 'Montserrat', sans-serif;
+}
+
+h1,
+p {
+  margin: 0;
+}
+
+a {
+  color: var(--secondary-color);
+  text-decoration: none;
+}
+
+hr {
+  width: 100%;
+  border: 1px solid var(--secondary-color);
+  border-radius: 1px;
+}
+
+header {
+  width: 100%;
+  height: 75px;
+  border-bottom: 4px solid var(--secondary-color);
+  background-color: var(--primary-color);
+  box-sizing: border-box;
+}
+
+.spacer-1 {
+  width: 100%;
+  height: 1rem;
+}
+
+.spacer-3 {
+  width: 100%;
+  height: 3rem;
+}
+
+input[type='checkbox'] {
+  display: none;
+}
+
+input[type='checkbox']:checked ~ .overlay {
+  visibility: visible;
+}
+
+input[type='checkbox']:checked ~ .overlay-button span {
+  background-color: transparent;
+}
+
+input[type='checkbox']:checked ~ .overlay-button span:before {
+  transform: rotate(45deg) translate(7px, 7px);
+  opacity: 1;
+}
+
+input[type='checkbox']:checked ~ .overlay-button span:after {
+  transform: rotate(-45deg) translate(7px, -7px);
+}
+
+.overlay-button {
+  position: fixed;
+  top: 1rem;
+  right: 0.5rem;
+  padding: 1rem;
+  cursor: pointer;
+  z-index: 10;
+}
+
+.overlay-button span {
+  position: relative;
+  display: block;
+  width: 35px;
+  height: 4px;
+  border-radius: 2px;
+  background-color: var(--secondary-color);
+  transition: all 0.3s ease;
+}
+
+.overlay-button span:before {
+  top: -10px;
+}
+
+.overlay-button span:after {
+  top: 10px;
+}
+
+.overlay-button span:before,
+.overlay-button span:after {
+  position: absolute;
+  width: 35px;
+  height: 4px;
+  border-radius: 2px;
+  content: '';
+  background-color: var(--secondary-color);
+  transition: all 0.3s ease;
+}
+
+.overlay {
+  position: fixed;
+  width: 100vw;
+  height: 100vh;
+  background-color: var(--primary-color);
+  visibility: hidden;
+  z-index: 5;
+}
+
+.overlay nav {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.overlay nav a {
+  padding: 1rem;
+  font-weight: bold;
+  text-decoration: none;
+  text-transform: uppercase;
+  color: #ffffff;
+  white-space: nowrap;
+}
+
+.flag {
+  width: auto;
+  height: 30px;
+  aspect-ratio: attr(width) / attr(height);
+}
+
+main {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+main h1 {
+  padding: 0 1rem;
+  font-size: 2rem;
+  font-weight: bold;
+  text-align: center;
+  color: var(--primary-color);
+}
+
+.logo {
+  width: auto;
+  height: 100px;
+  aspect-ratio: attr(width) / attr(height);
+}
+
+.hero-wrapper {
+  width: calc(100% - 1rem);
+  max-width: 1600px;
+}
+
+.hero {
+  width: 100%;
+  height: auto;
+  aspect-ratio: attr(width) / attr(height);
+  border-radius: 20px;
+  box-shadow: var(--shadow);
+}
+
+section {
+  width: 90%;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.card-heading {
+  position: relative;
+  top: 25px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 200px;
+  height: 50px;
+  border: 2px solid var(--secondary-color);
+  border-radius: 20px;
+  font-weight: bold;
+  text-transform: uppercase;
+  color: #ffffff;
+  background-color: var(--primary-color);
+  box-shadow: var(--shadow);
+}
+
+.card-container {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  padding: 3rem 1rem 1rem;
+  border-radius: 20px;
+  box-sizing: border-box;
+  box-shadow: var(--shadow);
+}
+
+#leitbild p {
+  line-height: 2em;
+}
+
+#leitbild img {
+  align-self: center;
+  width: 100px;
+  height: auto;
+  aspect-ratio: attr(width) / attr(height);
+}
+
+#leistungen .card-container {
+  align-items: center;
+}
+
+#leistungen h2 {
+  max-width: 500px;
+  margin: 0;
+  font-size: 1rem;
+  line-height: 1.5em;
+  text-align: center;
+}
+
+.heading-icon-big {
+  width: 75px;
+  height: auto;
+  aspect-ratio: attr(width) / attr(height);
+  padding: 1rem;
+}
+
+.heading-icon-small {
+  width: 50px;
+  height: auto;
+  aspect-ratio: attr(width) / attr(height);
+  padding: 1rem;
+}
+
+.item-icon {
+  width: 50px;
+  height: auto;
+  aspect-ratio: attr(width) / attr(height);
+  padding: 1rem;
+}
+
+.leistungen-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+  grid-gap: 1rem;
+  width: 100%;
+}
+
+.leistungen-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-height: 140px;
+}
+
+.leistungen-item p {
+  font-size: 0.875rem;
+  line-height: 1.5em;
+  text-align: center;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+  -webkit-hyphens: auto;
+  -moz-hyphens: auto;
+  hyphens: auto;
+}
+
+#team {
+  text-align: center;
+}
+
+#team h1 {
+  font-size: 1.5rem;
+}
+
+#team h2,
+#jobs h2 {
+  font-size: 1rem;
+  line-height: 1.5em;
+}
+
+.team-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+  grid-column-gap: 1rem;
+  grid-row-gap: 2rem;
+  width: 100%;
+}
+
+.team-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.team-item img {
+  width: 150px;
+  height: auto;
+  aspect-ratio: attr(width) / attr(height);
+  border-radius: 10px;
+  box-shadow: var(--shadow);
+}
+
+.team-item-label {
+  display: flex;
+  flex-direction: column;
+  justify-content: stretch;
+}
+
+.team-item-label p {
+  font-size: 0.875rem;
+  line-height: 1.5em;
+}
+
+#jobs ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+#jobs ul li:before {
+  display: inline-block;
+  width: 1rem;
+  font-weight: bold;
+  color: var(--secondary-color);
+  content: '\2022';
+}
+
+#jobs li {
+  font-size: 1rem;
+  line-height: 2em;
+}
+
+.address {
+  display: flex;
+  flex-direction: column;
+}
+
+#map {
+  width: 100%;
+  height: 300px;
+  border-radius: 10px;
+  z-index: 1;
+}
+
+footer {
+  width: 100%;
+  height: 125px;
+  border-top: 4px solid var(--secondary-color);
+  background-color: var(--primary-color);
+  box-sizing: border-box;
+}
+
+footer nav {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+footer nav a {
+  padding: 1rem;
+  font-weight: bold;
+  text-decoration: none;
+  text-transform: uppercase;
+  color: #ffffff;
+  white-space: nowrap;
+}
+
+.static-text {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  max-width: 1080px;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+  -webkit-hyphens: auto;
+  -moz-hyphens: auto;
+  hyphens: auto;
+}
+
+.static-text h1 {
+  padding: 0;
+  font-size: 1.5rem;
+  text-align: left;
+}
+
+.static-text h2 {
+  font-size: 1.25rem;
+}
+
+.static-text h3 {
+  font-size: 1.125rem;
+}
+
+.static-text p,
+.static-text li {
+  line-height: 2em;
+}
+
+@media only screen and (min-width: 768px) {
+  .logo {
+    height: 150px;
+  }
+
+  .hero-wrapper {
+    width: calc(100% - 2rem);
+  }
+
+  .card {
+    align-items: flex-start;
+  }
+
+  .card-heading {
+    left: 2rem;
+  }
+
+  .leistungen-grid {
+    grid-template-columns: repeat(4, minmax(140px, 1fr));
+  }
+
+  .team-grid {
+    grid-template-columns: repeat(3, minmax(140px, 1fr));
+  }
+
+  .team-item img {
+    width: 200px;
+  }
+
+  footer {
+    display: flex;
+    justify-content: flex-end;
+    height: 75px;
+  }
+
+  footer nav {
+    flex-direction: row;
+  }
+
+  footer nav a:last-child {
+    margin-right: 1rem;
+  }
+}
+
+@media only screen and (min-width: 1200px) {
+  header {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+  }
+
+  .overlay-button {
+    display: none;
+  }
+
+  .overlay {
+    position: relative;
+    width: auto;
+    height: auto;
+    background-color: transparent;
+    visibility: visible;
+    z-index: 5;
+  }
+
+  .overlay nav {
+    flex-direction: row;
+    height: auto;
+  }
+
+  .overlay nav a {
+    transition: all 0.3s ease;
+  }
+
+  .overlay nav a:last-child {
+    margin-right: 1rem;
+  }
+
+  .overlay nav a:hover {
+    color: var(--secondary-color);
+    transform: scale(1.1);
+  }
+
+  main h1 {
+    font-size: 4rem;
+  }
+
+  section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .card-container {
+    width: 1080px;
+    padding: 3rem 2rem 2rem;
+  }
+
+  .leistungen-item p {
+    font-size: 1rem;
+  }
+
+  .team-item img {
+    width: 300px;
+  }
+
+  .team-item-label p {
+    font-size: 1rem;
+  }
+
+  #map {
+    height: 400px;
+  }
+
+  footer nav a {
+    transition: all 0.3s ease;
+  }
+
+  footer nav a:hover {
+    color: var(--secondary-color);
+    transform: scale(1.1);
+  }
+}
