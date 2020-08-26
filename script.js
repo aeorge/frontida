@@ -1,7 +1,7 @@
 document.addEventListener('DOMContentLoaded', () => {
   setTimeout(() => {
     mapboxgl.accessToken =
-      'pk.eyJ1Ijoia290emlhYmFzc2lzIiwiYSI6ImNrODBqNnFxdTAxemozcWxteTd4MHBidzQifQ.64bRovdQ4UMKAkiInypf3w'
+      'pk.eyJ1Ijoia290emlhYmFzc2lzIiwiYSI6ImNrOGx2N3VleDA2ZTYzZm8ycWU4cDBwMG4ifQ.nidy7tkxWzA60m1YFA55bQ'
     const map = new mapboxgl.Map({
       container: 'map',
       style: 'mapbox://styles/mapbox/light-v10?optimize=true',
